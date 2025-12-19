@@ -1,0 +1,1 @@
+console.log('pular esta aula porque uso windows e não linux.')
