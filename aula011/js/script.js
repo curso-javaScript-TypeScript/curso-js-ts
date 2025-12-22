@@ -1,0 +1,1 @@
+alert('Deus é fiel. Confie sempre nele!');
