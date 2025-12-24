@@ -1,4 +1,4 @@
-console.log(100 / 0); // não é 0 e sim infinity, assim é True
+console.log(1000 / 0); // não é 0 e sim infinity, assim é True
 
 // let num1 = 9.54578;
 
