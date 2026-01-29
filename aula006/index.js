@@ -1,4 +1,5 @@
-/* Não podemos criar variáveis com palavras reservadas
+/*
+Não podemos criar variáveis com palavras reservadas
 como let = let, por exemplo.
 variáveis precisam ter nomes significativos
 Não pode começar o nome de uma variavél com números

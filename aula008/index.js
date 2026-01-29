@@ -14,7 +14,11 @@ let imc; // peso dividido por altura vezes altura
 let anoNascimento;
 
 imc = peso / (altura * altura);
-anoNascimento = 2025 - idade;
+anoNascimento = 2026 - idade;
+// templace strings forma moderna para os tempos atuais
+console.log(`${nome} ${sobrenome} tem ${idade} anos, pesa ${peso} kg`);
+console.log(`tem ${altura} de altura e seu IMC é de ${imc}`);
+console.log(`${nome} nasceu em ${anoNascimento}.`);
 
 // forma tradicional
 console.log(nome, sobrenome, 'tem',idade,'anos, pesa', peso,
@@ -25,8 +29,3 @@ console.log(nome, sobrenome, 'tem',idade,'anos, pesa', peso,
 console.log(nome + ' ' + sobrenome + ' tem ' + idade +' anos, pesa ' + peso +
     ' kg tem ' + altura + 'de altura e seu IMC é de ' + imc + ' ' 
     + nome + ' nasceu em ' + anoNascimento)
-
-// templace strings forma moderna para os tempos atuais
-console.log(`${nome} ${sobrenome} tem ${idade} anos, pesa ${peso} kg`);
-console.log(`tem ${altura} de altura e seu IMC é de ${imc}`);
-console.log(`${nome} nasceu em ${anoNascimento}.`);

@@ -1,4 +1,5 @@
-/* Não podemos criar constantes com palavras reservadas
+/*
+Não podemos criar constantes com palavras reservadas
 como let = let, por exemplo.
 constantes precisam ter nomes significativos
 Não pode começar o nome de uma constantes com números
