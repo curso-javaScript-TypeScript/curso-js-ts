@@ -45,8 +45,9 @@ const a = {
   sobrenome: 'V Gomes'
 };
 
-const b = a;
-// const b = {...a};
-b.nome = 'Gael';
+// const b = a;
+const b = {...a};
+a.nome = 'Gael';
+b.sobrenome = 'De Oliveira'
 console.log(a);
 console.log(b);
