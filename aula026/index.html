@@ -4,21 +4,23 @@
 <head>
   <meta charset="pt-BR">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercícios</title>
+  <title>Calcule seu IMC</title>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
 
   <section class="container">
-    <h1>🚀 HTML & CSS e JS & TS</h1>
-    <p>
-      Atualmente, estou mergulhado na parte prática de Estruturas Condicionais e na estruturação de layouts modernos com
-      HTML5 e CSS3.<br> É gratificante ver o código ganhar vida e os conceitos de lógica de programação se transformando em
-      interfaces reais.
-      <br><br>
-      Seguimos avançando, aula por aula, rumo ao domínio do desenvolvimento Full Stack! 💻🔥"
-    </p>
+    <h1>Calcule seu IMC</h1>
+    <form action="/" id="formulario" method="POST">
+      <label for="peso">Peso</label>
+      <input type="text" name="peso" id="peso">
+      <label for="altura">Altura</label>
+      <input type="text" name="altura" id="altura">
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
   </section>
 
   <script src="./assets/js/main.js"></script>
