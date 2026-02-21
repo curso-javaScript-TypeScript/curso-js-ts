@@ -36,6 +36,7 @@ for (let i = 500; i >= 400; i -= 10) {
 
 // indíce          0       1        2
 const frutas = ['Maçã', 'Pêra', 'Banana',
+//  3        4         5         6  
   'Uva', 'Abacaxi', 'Manga', 'Morango'];
 
 for (let i = 0; i < frutas.length; i++) {
