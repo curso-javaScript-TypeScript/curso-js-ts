@@ -60,3 +60,11 @@ form button:hover {
 form button:active {
   background: rebeccapurple;
 }
+
+.relogio {
+  font-size: 3rem;
+}
+
+.pausado {
+  color: rgb(255, 0, 179);
+}
