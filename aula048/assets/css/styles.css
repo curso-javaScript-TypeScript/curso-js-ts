@@ -50,21 +50,9 @@ form button {
   font-family: 700;
   height: 50px;
   cursor: pointer;
-  margin-top: 3%;
+  margin-top: 30px;
 }
 
 form button:hover {
   background: var(--primary-color-darker);
-}
-
-form button:active {
-  background: rebeccapurple;
-}
-
-.relogio {
-  font-size: 3rem;
-}
-
-.pausado {
-  color: rgb(255, 0, 179);
 }
