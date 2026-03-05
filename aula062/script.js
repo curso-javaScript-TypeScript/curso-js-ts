@@ -3,7 +3,8 @@
 
 const nomes = [ 'Magno', 'Vargas', 'Gomes' ];
 const nome = nomes.join(' ');
-console.log(nome);
+console.log(nomes);
+
 
 /*
 const nome = 'Magno, Vargas, Gomes';
