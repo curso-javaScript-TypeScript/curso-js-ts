@@ -3,15 +3,7 @@
 
 Filter -> Sempre retornar um array, com a mesma quantidade 
 de elementos ou menos.
-
-Retorne os números maiores que 10
-
-const numerosFiltrados = numeros.filter(valor => valor > 10);
-console.log(numerosFiltrados);
-0  1   2   3  4 .....
-const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
 */
-
 const pessoas = [
     { nome: 'Magno', idade: 51 },
     { nome: 'Neusa', idade: 38 },
@@ -21,7 +13,7 @@ const pessoas = [
     { nome: 'Wallace', idade: 87 },
   ];
 // Retorne as pessoas que tem o nome com 5 letras ou mais
-  const nomeGrande = pessoas.filter(obj => obj.nome.length >= 6);
+  const nomeGrande = pessoas.filter(obj => obj.nome.length <= 5);
   console.log(nomeGrande);
 // Retorne as pessoas com mais de 50 anos
   const maisDe50anos = pessoas.filter(obj => obj.idade > 50);
@@ -33,10 +25,21 @@ const pessoas = [
     console.log(nomeTerminaComA);
 
 
-
 /*
-const numerosFitrados = numeros.filter(callBackFilter);
+Retorne os números maiores que 10
+indíces          0  1   2   3  4 .....
+const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
+const numerosFiltrados = numeros.filter(valor => valor > 10);
+console.log(numerosFiltrados);
+
+terminal = [ 50, 80, 11, 15, 22, 27 ]
+
+*****************************************************************
+
+const numerosFitrados = numeros.filter(valor => valor > 10);
 console.log(numerosFitrados);
+
+terminal = [ 50, 80, 11, 15, 22, 27 ]
 
 ******************************************************
 
@@ -44,6 +47,8 @@ const numerosFiltrados = numeros.filter(valor => {
   return valor > 10;
 });
 console.log(numerosFiltrados);
+
+terminal = [ 50, 80, 11, 15, 22, 27 ]
 
 *******************************************
 
@@ -53,8 +58,10 @@ function callBackFilter(valor, indice, array) -> código maior
 function callBackFilter(valor) {
   return valor > 10;
 }
-  
+ terminal = [ 50, 80, 11, 15, 22, 27 ]
+
 *************************************************
+
 const menores = [];
     
 for(let i = 0; i <numeros.length; i++) {
@@ -64,4 +71,5 @@ for(let i = 0; i <numeros.length; i++) {
 }
 console.log(menores);
 
+terminal = [ 50, 80, 11, 15, 22, 27 ]
 */
