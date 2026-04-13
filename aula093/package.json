@@ -1,23 +1,24 @@
 {
   "name": "aula093",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Boilerplate para Webpack e Babel",
+  "main": "index.js",
   "scripts": {
     "gera": "webpack -w"
   },
   "keywords": [],
-  "author": "",
+  "author": "Magno",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
     "babel-loader": "^10.1.1",
-    "core-js": "^2.6.12",
-    "regenerator-runtime": "^0.14.1",
     "webpack": "^5.106.1",
     "webpack-cli": "^7.0.2"
+  },
+  "dependencies": {
+    "core-js": "^3.49.0",
+    "regenerator-runtime": "^0.14.1"
   }
 }
