@@ -1,10 +1,10 @@
 {
-  "name": "aula093",
+  "name": "aula094",
   "version": "1.0.0",
   "description": "Boilerplate para Webpack e Babel",
   "main": "index.js",
   "scripts": {
-    "gera": "webpack -w"
+    "dev": "webpack -w"
   },
   "author": "Magno",
   "keywords": [],

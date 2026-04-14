@@ -1,2 +1,2 @@
-console.log("Glória a Deusssss!!!");
+(()=>{"use strict";const e=function(e,o){return e*o};(Object.getOwnPropertyDescriptor(e,"name")||{}).writable||Object.defineProperty(e,"name",{value:"default",configurable:!0}),console.log(e(26,2)),console.log("Magno","V Gomes",52,10)})();
 //# sourceMappingURL=bundle.js.map
