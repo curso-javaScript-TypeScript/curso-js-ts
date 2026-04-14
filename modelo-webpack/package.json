@@ -1,10 +1,10 @@
 {
-  "name": "aula093",
+  "name": "modelo",
   "version": "1.0.0",
   "description": "Boilerplate para Webpack e Babel",
   "main": "index.js",
   "scripts": {
-    "gera": "webpack -w"
+    "dev": "webpack -w"
   },
   "keywords": [],
   "author": "Magno",
@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "core-js": "^3.49.0",
-    "regenerator-runtime": "^0.14.1"
+    "css-loader": "^7.1.4",
+    "regenerator-runtime": "^0.14.1",
+    "style-loader": "^4.0.0"
   }
 }
