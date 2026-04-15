@@ -1,5 +1,5 @@
 // 705.484.450-52 070.987.720-03
-class ValidaCPF{
+export default class ValidaCPF{
   constructor(cpfEnviado) {
     Object.defineProperty(this, 'cpfSoNumeros', {
       writable: false,
@@ -43,12 +43,3 @@ class ValidaCPF{
   return this.novoCPF === this.cpfSoNumeros;
   }
 }
-
-// let validacpf = new ValidaCPF('070.987.720-03');
-// // validacpf = new ValidaCPF('000.000.000-00');
-
-// if (validacpf.valida()) {
-//   console.log('CPF Válido!');
-// } else {
-// console.log('CPF Inválido!');
-// }
