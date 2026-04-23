@@ -17,6 +17,14 @@
 
 const express = require('express');
 const app = express();
+// ************* BODY *******************
+app.use(
+  express.urlencoded(
+    { 
+      extended: true 
+    }
+  )
+);
 
 app.get('/', (req, res) => {
   res.send(`
@@ -27,10 +35,45 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.get('/testes', (req, res) => {
-  console.log(req.params);
-  res.send('Parâmetros para testes');
+app.get('/testes/:idUsuarios', (req, res) => {
+  console.log('PARAMS:', req.params);
+  console.log('QUERY', req.query);
+  res.send(req.query);
 });
+
+app.post('/', (req, res) => {
+  console.log(req.body);
+  console.log()
+  res.send(`Você me enviou o seguinte nome: ${req.body.nome}`);
+});
+
+app.listen(3000, () => {
+  console.log('Acessar http://localhost:3000');
+  console.log('Servidor executando na porta 3000');
+});
+
+/*
+########## exemplos e testes da aula em 2026 ################
+**************** PARAMS E QUERY ****************
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send(`
+  <form action="/" method="POST">
+  Nome do cliente: <input type="text" name="nome">
+  <button>Enviar dados</button>
+  </form>
+  `);
+});
+
+app.get('/testes/:idUsuarios', (req, res) => {
+  console.log('PARAMS:', req.params);
+  console.log('QUERY', req.query);
+  res.send(req.query);
+});
+
 
 app.post('/', (req, res) => {
   res.send('Recebemos o formulário');
@@ -40,3 +83,4 @@ app.listen(3000, () => {
   console.log('Acessar http://localhost:3000');
   console.log('Servidor executando na porta 3000');
 });
+*/
