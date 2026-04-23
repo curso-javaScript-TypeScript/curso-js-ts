@@ -1,12 +1,20 @@
-/*
-        Criar   ler   atualizar apagar
-CRUD -> CREATE, READ, UPDATE,   DELETE
-        POST    GET   PUT       DELETE
+/*1. req.params (Parâmetros de Rota)
+  Ex: http://instagram.com/profiles/12345
+  Usado para identificar um recurso específico. O Express lê ":id" na rota e te entrega "12345".
+  No código: app.get('/profiles/:id', ...)
 
-        http://meusite.com/ <- GET -> Entregue a página /
-ROTAS-> http://meusite.com/sobre <- GET -> Entregue a página /sobre
-        http://meusite.com/contato <- GET -> Entregue a página /contato
-*/
+  2. req.query (Query Strings)
+  Ex: http://instagram.com/profiles/123?campanha=gemini&cupom=gratis
+  Usado para filtros, buscas ou marketing. Tudo que vem após a "?" e é separado por "&".
+  No código: req.query.campanha (seria "gemini")
+
+  3. req.body (Corpo da Requisição)
+  Ex: { "nome": "Magno", "id": "12345" } enviado via formulário POST.
+  Os dados NÃO aparecem na URL. Eles viajam "dentro" do pacote da requisição.
+  Usado para criar ou editar dados (senhas, nomes, cadastros).
+  No código: req.body.nome.   */
+
+
 const express = require('express');
 const app = express();
 
@@ -19,12 +27,13 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.post('/', (req, res) => {
-  res.send('Recebemos o formulário');
+app.get('/testes', (req, res) => {
+  console.log(req.params);
+  res.send('Parâmetros para testes');
 });
 
-app.get('/contato', (req, res) => {
-  res.send('Obrigado por entrar em contato conosco.');
+app.post('/', (req, res) => {
+  res.send('Recebemos o formulário');
 });
 
 app.listen(3000, () => {
