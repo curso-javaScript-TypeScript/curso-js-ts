@@ -1,26 +1,35 @@
-const path = require('path'); // CommonJS
+console.log('WEBPACK CONFIG CARREGADO');
+
+const path = require('path');
 
 module.exports = {
-  mode: 'production',
-  entry: './src/main.js',
+  mode: 'development',
+
+  entry: './frontend/main.js',
+
   output: {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
+
   module: {
-    rules: [{
+    rules: [
+      {
+        test: /\.m?js$/,
         exclude: /node_modules/,
-        test: /\.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env'],
-          },
-        },
-    }, {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader']
-    }]
+        type: 'javascript/auto'
+      },
+
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   },
-  devtool: 'source-map',
+
+  resolve: {
+    extensions: ['.js']
+  },
+
+  devtool: 'source-map'
 };
