@@ -1,4 +1,5 @@
 exports.paginaInicial = (req, res) => {
+  console.log(req.flash('error'), req.flash('success'), req.flash('info'));
   res.render('index');
   return;
 };
@@ -9,21 +10,15 @@ exports.rotaPost = (req, res) => {
 };
 
 
-/* ########### exemplos e testes da aula ##########
-
-const HomeModel = require('../models/HomeModel');
-
-HomeModel.create({ <-- .find retornaria os dados no terminal
-  titulo: 'Acrescentando mais um título na BD - aula 14',
-  descricao: 'Base de Dados para o MongoBD.'
-  // titulo: 'Título de teste - aula 14',
-  // descricao: 'Descrição de testes.'
-})
-  .then(dados => console.log(dados))
-  .catch(e => console.log(e));
+/* ######### testes e exemplos do código na aula 15 #########
 
 exports.paginaInicial = (req, res) => {
-  console.log('Respondendo ao cliente.');
+  console.log(req.session.usuario);
+  req.session.usuario = { nome: 'Magno', logado: true };
+
+  req.flash('info', 'Deus é fiel!');
+  req.flash('error', 'É um erro não crer nele!');
+  req.flash('success', 'Só Jesus salva!');
   res.render('index');
   return;
 };
