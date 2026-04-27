@@ -1,0 +1,42 @@
+{
+  "name": "aula15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js --ignore public --ignore frontend",
+    "dev": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udemy-web-fullstack/curso-js-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/udemy-web-fullstack/curso-js-ts/issues"
+  },
+  "homepage": "https://github.com/udemy-web-fullstack/curso-js-ts#readme",
+  "dependencies": {
+    "core-js": "^3.49.0",
+    "css-loader": "^7.1.4",
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.5.0",
+    "regenerator-runtime": "^0.14.1",
+    "style-loader": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "babel-loader": "^10.1.1",
+    "nodemon": "^3.1.14",
+    "webpack": "^5.106.1",
+    "webpack-cli": "^7.0.2"
+  }
+}
