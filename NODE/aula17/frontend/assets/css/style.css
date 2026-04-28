@@ -22,8 +22,15 @@ body {
   max-width: 640px;
   margin: 50px auto;
   background: #fff;
-  padding: 20px;
+  padding: 50px;
   border-radius: 10px;
+}
+
+h1 {
+  font-size: 2rem;    
+  line-height: 1.2;    
+  margin-top: 0;      
+  margin-bottom: 30px;
 }
 
 form input, form label, form button {
@@ -35,7 +42,7 @@ form input, form label, form button {
 form input {
   font-size: 24px;
   height: 50px;
-  width: 0 20px;
+  padding: 0 15px;
 }
 
 form input:focus {
@@ -47,7 +54,7 @@ form button {
   background: var(--primary-color);
   color: #fff;
   font-size: 18px;
-  font-family: 700;
+  font-weight: 700;
   height: 50px;
   cursor: pointer;
   margin-top: 3%;

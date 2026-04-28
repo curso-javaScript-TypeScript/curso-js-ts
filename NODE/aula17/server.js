@@ -11,16 +11,19 @@ mongoose.connect(process.env.CONNECTIONSTRING)
   .catch(e => console.log('Falha com a conexão.', e));
 
 const session = require('express-session');
-const MongoStore = require('connect-mongo').default; // ADICIONADO .default AQUI
+const MongoStore = require('connect-mongo').default;
 const flash = require('connect-flash');
-
 const routes = require('./routes');
 const path = require('path');
-const { middlewareGlobal } = require('./src/middleware/middleware');
+const helmet = require('helmet');
+const csrf = require('csurf');
+const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middleware/middleware');
 
+app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
+app.use('/frontend', express.static(path.resolve(__dirname, 'frontend')));
 
 const sessionOptions = session({
   secret: 'sua_frase_secreta',
@@ -39,7 +42,11 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views')); 
 app.set('view engine', 'ejs');
 
+app.use(csrf());
+// Meus próprios middlewares
 app.use(middlewareGlobal);
+app.use(checkCsrfError);
+app.use(csrfMiddleware);
 app.use(routes);
 
 app.on('pronto', () => {
