@@ -1,6 +1,8 @@
 exports.paginaInicial = (req, res) => {
-  console.log(req.flash('error'), req.flash('success'), req.flash('info'));
-  res.render('index');
+  res.render('index', {
+    titulo: 'Estudando JS na aula 16',
+    numeros: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  });
   return;
 };
 
@@ -10,22 +12,31 @@ exports.rotaPost = (req, res) => {
 };
 
 
-/* ######### testes e exemplos do código na aula 15 #########
+/* ######### testes e exemplos do código na aula 16 #########
 
-exports.paginaInicial = (req, res) => {
-  console.log(req.session.usuario);
-  req.session.usuario = { nome: 'Magno', logado: true };
+  titulo: 'Estudando <span style="color:blue;">E>JS na aula 16',
+  numeros: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-  req.flash('info', 'Deus é fiel!');
-  req.flash('error', 'É um erro não crer nele!');
-  req.flash('success', 'Só Jesus salva!');
-  res.render('index');
-  return;
-};
+  titulo: 'Estudando JS na aula 16',
 
-exports.rotaPost = (req, res) => {
-  res.send(req.body);
-  return;
-};
 
+****************************************************
+  
+
+<%# ######### testes e exemplos do arquivo .ejs #########
+
+  <%#= titulo %>
+  <%#- titulo %>
+
+  <%# if(typeof titulo !== 'undefined') { %> <%#= titulo %>
+    <%# } else { %>
+      O titulo não foi envidado.
+    <%# } %>
+
+**************************************************************
+
+    <% numeros.forEach(num => { %>
+      <%= num %>
+      <br><br>
+    <% }); %>
 */
