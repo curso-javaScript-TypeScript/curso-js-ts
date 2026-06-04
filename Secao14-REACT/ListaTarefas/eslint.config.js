@@ -1,5 +1,5 @@
 import js from '@eslint/js';
-import react from 'eslint-plugin-react'; // 🎯 Importamos o plugin do React
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import { defineConfig, globalIgnores } from 'eslint/config';
