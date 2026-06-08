@@ -6,9 +6,10 @@ export default function Login() {
     <Container>
       <Title>
         Login
-        <small>Deus é fiel!</small>
+        <small> Deus é fiel!</small>
       </Title>
       <Paragrafo>Com a permissão dele irei longe como dev.</Paragrafo>
+      <button type="button">Enviar</button>
     </Container>
   );
 }
