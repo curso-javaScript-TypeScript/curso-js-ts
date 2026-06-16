@@ -4,10 +4,10 @@ import * as types from '../types';
 import * as actions from './actions';
 
 const requisicao = () =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     setTimeout(() => {
-      reject();
-    }, 2000);
+      resolve();
+    }, 750);
   });
 
 function* exampleRequest() {
