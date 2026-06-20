@@ -4,9 +4,9 @@ import storage from 'redux-persist/es/storage';
 export default (reducer) => {
   const persistReducers = persistReducer(
     {
-      key: 'REACT-BASE',
+      key: 'CONSUMO-API',
       storage,
-      whitelist: ['example'],
+      whitelist: ['auth'],
     },
     reducer,
   );
