@@ -15,7 +15,7 @@ export default function Login(props) {
 
   const prevPath = get(props, 'location.state.prevPath', '/');
 
-  const isLoading = useSelector(state => state.auth.isLoading);
+  const isLoading = useSelector((state) => state.auth.isLoading);
 
   const [email, SetEmail] = React.useState('');
   const [password, SetPassword] = React.useState('');
@@ -41,7 +41,7 @@ export default function Login(props) {
 
   return (
     <Container>
-      <Loading isLoading={} />
+      <Loading isLoading={isLoading} />
 
       <h1>Login</h1>
 
