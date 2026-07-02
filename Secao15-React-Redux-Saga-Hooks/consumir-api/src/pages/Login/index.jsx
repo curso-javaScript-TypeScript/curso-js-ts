@@ -14,6 +14,7 @@ export default function Login(props) {
   const dispatch = useDispatch();
 
   const prevPath = get(props, 'location.state.prevPath', '/');
+  const { history } = props;
 
   const isLoading = useSelector((state) => state.auth.isLoading);
 
@@ -36,7 +37,14 @@ export default function Login(props) {
 
     if (formErrors) return;
 
-    dispatch(actions.loginRequest({ email, password, prevPath }));
+    dispatch(
+      actions.loginRequest({
+        email,
+        password,
+        prevPath,
+        history,
+      }),
+    );
   };
 
   return (

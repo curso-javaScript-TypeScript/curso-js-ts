@@ -21,4 +21,9 @@ export const ProfilePicture = styled.div`
     height: 36px;
     border-radius: 50%;
   }
+
+  svg {
+    width: 36px;
+    height: 36px;
+  }
 `;
