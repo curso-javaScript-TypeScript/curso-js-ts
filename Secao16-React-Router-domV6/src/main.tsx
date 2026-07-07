@@ -8,6 +8,7 @@ import { About } from './components/About';
 import { Menu } from './components/Menu';
 import { Post } from './components/Post';
 import { Redirect } from './components/Redirect';
+import { NotFound } from './components/NotFound';
 
 
 createRoot(document.getElementById('root')!).render(
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
       <Route path="/posts/:id" element={<Post />} />
       <Route path="/posts" element={<Post />} />
       <Route path="/Redirect" element={<Redirect />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     </BrowserRouter>
   </StrictMode>,

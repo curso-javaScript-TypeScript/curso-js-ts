@@ -22,7 +22,7 @@ export const Redirect = () => {
       clearTimeout(timeout.current);
     };
 
-  }, [time]);
+  }, [time, navigate]);
 
 
   return (
