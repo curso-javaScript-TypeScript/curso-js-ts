@@ -1,6 +1,6 @@
 //Flag 'g' - global (encontra todas as ocorrências)
 //Flag 'i' - insensitive (checa casos com letras maiúsculas e minusculas)
-// grupos com ( )
+// grupos com (() ())
 // | ou
 
 const { texto } = require("./base");
