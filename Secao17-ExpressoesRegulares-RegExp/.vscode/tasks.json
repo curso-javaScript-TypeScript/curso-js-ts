@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Rodar no Terminal Externo",
+      "type": "shell",
+      "command": "node aula05.js",
+      "options": {
+        "shell": {
+          "executable": "powershell.exe",
+          "args": ["-NoExit", "-Command"]
+        }
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
