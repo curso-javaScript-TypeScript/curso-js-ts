@@ -55,13 +55,14 @@ Os Ips são:
 const alfabeto =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz ®¡ 0123456789 ¡";
 
-const html = "<p>Olá mundo</p> <p>Olá de novo</p> <div>Sou a div</div>";
+const html = "<p>Deus é  fiel</p> <p>Deus é  justo</p> <div>Sou a div</div>";
+const html2 = `<p data-teste='teste' class='teste teste'>Deus é fiel!</p> <p>Deus é fiel!</p> <div>Sou a div</div>`;
 
-const html2 = `<p 
-data-teste='teste' 
-class="teste teste">
-  Olá mundo
-</p> <p>Olá mundo</p> <div>Sou a div</div>`;
+// const html2 = `<p
+// data-teste='teste'
+// class="teste teste">
+//   Deus é  fiel
+// </p> <p>Deus é  fiel</p> <div>Sou a div</div>`;
 
 const lookahead = `
 ONLINE  192.168.0.1 ABCDEF inactive
